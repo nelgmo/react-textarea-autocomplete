@@ -1,5 +1,11 @@
 {
-  "extends": ["@jukben"],
+  "extends": ["airbnb", "plugin:flowtype/recommended", "plugin:prettier/recommended"],
+  "plugins": ["react", "jsx-a11y", "import", "flowtype", "prettier"],
+  "env": {
+    "browser": true,
+    "node": true,
+    "jest": true
+  },
   "rules": {
     "react/jsx-filename-extension": [
       1,

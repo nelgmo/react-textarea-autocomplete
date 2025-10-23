@@ -5,9 +5,12 @@ process.env.NODE_ENV = "development";
 
 module.exports = {
   mode: "development",
-  entry: ["@babel/polyfill", "./example/index.js"],
+  entry: "./example/index.js",
   devServer: {
-    port: 8080
+    port: 8080,
+    static: {
+      directory: path.join(__dirname, 'example')
+    }
   },
   resolve: {
     alias: {

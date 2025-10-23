@@ -1,10 +1,6 @@
 /**
- * Polyfill for CI
+ * Test setup for React Testing Library
  */
-import "@babel/polyfill";
-import { configure } from "enzyme";
-import Adapter from "enzyme-adapter-react-16";
-
-configure({ adapter: new Adapter() });
+import '@testing-library/jest-dom';
 
 window.HTMLElement.prototype.scrollIntoView = function() {};

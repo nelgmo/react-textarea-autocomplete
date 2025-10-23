@@ -1,16 +1,13 @@
-/**
- * Polyfill for CI
- */
 import React from "react";
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom/client";
 
 import "./style.css";
 
 import App from "./App.jsx";
 
-ReactDOM.render(
+const root = createRoot(document.getElementById("app"));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById("app")
+  </React.StrictMode>
 );
